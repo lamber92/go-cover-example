@@ -10,6 +10,9 @@ func Test1(ctx context.Context) (string, error) {
 	return model.Test1(ctx)
 }
 
-func Test2(ctx context.Context) (string, error) {
-	return model.Test2(ctx)
+func Test2(ctx context.Context, flag string) (string, error) {
+	if len(flag) == 0 {
+		return model.Test2(ctx)
+	}
+	return "flag_test_2", nil
 }

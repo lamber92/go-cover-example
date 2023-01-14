@@ -24,7 +24,8 @@ func TestAPI1(ctx *gin.Context) {
 }
 
 func TestAPI2(ctx *gin.Context) {
-	res, err := logic.Test2(ctx)
+	flag := ctx.DefaultQuery("flag", "")
+	res, err := logic.Test2(ctx, flag)
 	if err != nil {
 		ctx.JSON(http.StatusOK, map[string]interface{}{
 			"code": 1000,
