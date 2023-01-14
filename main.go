@@ -19,6 +19,7 @@ func main() {
 func newRouter() *gin.Engine {
 	engine := gin.Default()
 	engine.GET("test_1", controller.TestAPI1)
+	engine.GET("test_2", controller.TestAPI2)
 
 	return engine
 }

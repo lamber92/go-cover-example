@@ -9,3 +9,7 @@ import (
 func Test1(ctx context.Context) (string, error) {
 	return model.Test1(ctx)
 }
+
+func Test2(ctx context.Context) (string, error) {
+	return model.Test2(ctx)
+}
